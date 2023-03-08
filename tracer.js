@@ -212,15 +212,15 @@ function test() {
     maxIn = getRandomInt(5, 15);
     for (let i = 0; i < maxIn; i++) {
       var t = {};
-      t["a-insideFormSubmitFunction"] = init;
-      t["b-timeToValidateFormData"] =
-        t["a-insideFormSubmitFunction"] + getRandomInt(1, 2);
-      t["c-timeToInsertInDatabase"] =
-        t["b-timeToValidateFormData"] + getRandomInt(6, 11);
-      t["d-timeToUpdatCache"] =
-        t["c-timeToInsertInDatabase"] + getRandomInt(0, 1);
-      t["e-timeToSendNotification"] =
-        t["d-timeToUpdatCache"] + getRandomInt(1, 2);
+      t["a-inside_form_submit_function"] = init;
+      t["b-time_to_validate_form_data"] =
+        t["a-inside_form_submit_function"] + getRandomInt(1, 2);
+      t["c-time_to_insert_in_database"] =
+        t["b-time_to_validate_form_data"] + getRandomInt(6, 11);
+      t["d-time_to_update_cache"] =
+        t["c-time_to_insert_in_database"] + getRandomInt(0, 1);
+      t["e-time_to_send_notification"] =
+        t["d-time_to_update_cache"] + getRandomInt(1, 2);
       formSubmissionApi.push(t);
     }
     ran = getRandomInt(0, 3);
@@ -236,11 +236,11 @@ function test() {
     maxIn = getRandomInt(5, 15);
     for (let i = 0; i < maxIn; i++) {
       var t = {};
-      t["a-insideFileUploadFunction"] = init;
-      t["b-timeToValidateFile"] =
-        t["a-insideFileUploadFunction"] + getRandomInt(0, 2);
-      t["c-timeToInsertFileIntoFileStorage"] =
-        t["b-timeToValidateFile"] + getRandomInt(100, 200);
+      t["a-inside_file_upload_function"] = init;
+      t["b-time_to_validate_file"] =
+        t["a-inside_file_upload_function"] + getRandomInt(0, 2);
+      t["c-time_to_insert_file_into_file_storage"] =
+        t["b-time_to_validate_file"] + getRandomInt(100, 200);
       fileUploadApi.push(t);
     }
     ran = getRandomInt(3, 10);
